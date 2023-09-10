@@ -16,9 +16,9 @@ class PDFController  extends Controller
         ]);
 
         $pdfFile = $request->file('pdf_file');
-
+//D:\me\CODS\Laravel\Soft_Fleet
         // Use spatie/pdf-to-text to read the PDF
-          $text = (new Pdf('D:\me\CODS\Laravel\Soft_Fleet\resources\xpdf\bin64\pdftotext.exe'))
+          $text = (new Pdf('..\resources\xpdf\bin64\pdftotext.exe'))
             ->setPdf($pdfFile)
             ->text();
  
